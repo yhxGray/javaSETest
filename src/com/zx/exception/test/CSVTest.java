@@ -1,11 +1,10 @@
 package com.zx.exception.test;
 
 import java.io.BufferedWriter;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 public class CSVTest {
 	

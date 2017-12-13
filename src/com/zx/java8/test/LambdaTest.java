@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 import com.zx.reflect.test.User;
 
@@ -27,14 +27,14 @@ public class LambdaTest {
 	}
 	
 	/**
-	 * 取出list中的素数，并删除掉重复的元素后保存到新list中
+	 * 取锟斤拷list锟叫碉拷锟斤拷锟斤拷锟斤拷锟斤拷删锟斤拷锟斤拷锟截革拷锟斤拷元锟截后保存到锟斤拷list锟斤拷
 	 */
 	@Test
 	public void listTest2(){
 		List<String> ls=Arrays.asList("1","2","3","4","5","6","7","8","9","2","5","11","10","2");
-		List<Integer> li=ls.stream()	//先创建一个流
-				.map(a->new Integer(a))	//通过map方法，把流中的String元素转换成integer
-				.filter(a->{			//通过filter，判断素数并返回给流
+		List<Integer> li=ls.stream()	//锟饺达拷锟斤拷一锟斤拷锟斤拷
+				.map(a->new Integer(a))	//通锟斤拷map锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟叫碉拷String元锟斤拷转锟斤拷锟斤拷integer
+				.filter(a->{			//通锟斤拷filter锟斤拷锟叫讹拷锟斤拷锟斤拷锟斤拷锟斤拷锟截革拷锟斤拷
 					if(a==1) return false;
 					if(a==2) return true;
 					for(int i=2;i<=Math.sqrt(a);i++){
@@ -42,8 +42,8 @@ public class LambdaTest {
 					}
 					return true;
 				})
-				.distinct()				//查重，删除重复数据后返回给流
-				.collect(Collectors.toList());//将流变为List
+				.distinct()				//锟斤拷锟截ｏ拷删锟斤拷锟截革拷锟斤拷锟捷后返回革拷锟斤拷
+				.collect(Collectors.toList());//锟斤拷锟斤拷锟斤拷为List
 		li.forEach(i->{System.out.print(i+" ");});
 	}
 	/**

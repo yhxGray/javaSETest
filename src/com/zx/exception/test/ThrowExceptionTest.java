@@ -1,11 +1,11 @@
 package com.zx.exception.test;
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 public class ThrowExceptionTest {
 	/**
-	 * 当抛出一个异常时，方法中异常代码的下方代码将不会执行，直到某个方法进行了try catch，
-	 * 如果一直没有try catch，则会传给JVM，终止程序运行
+	 * 锟斤拷锟阶筹拷一锟斤拷锟届常时锟斤拷锟斤拷锟斤拷锟斤拷锟届常锟斤拷锟斤拷锟斤拷路锟斤拷锟斤拷虢拷锟斤拷锟街达拷校锟街憋拷锟侥筹拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟絫ry catch锟斤拷
+	 * 锟斤拷锟揭恢泵伙拷锟絫ry catch锟斤拷锟斤拷岽拷锟絁VM锟斤拷锟斤拷止锟斤拷锟斤拷锟斤拷锟斤拷
 	 */
 	@Test
 	public void ThrowRuntimeExceptionTest(){
