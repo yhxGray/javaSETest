@@ -3,7 +3,7 @@ package com.zx.other.test;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 import com.zx.reflect.test.User;
 

@@ -4,18 +4,15 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 public class GetLogException {
 	
@@ -31,10 +28,10 @@ public class GetLogException {
 //				if(s.matches("^.*16-07-0[6-7]\\s15:07:(([4-5][6-8])|(49)|(5[0-5])).*")){
 //					ls.add(s);
 //				}
-				if(s.matches("^.*16-.*$")&&s.length()>17){//ÔÚÕâÀï×öÁËÓ²ĞÔÅĞ¶Ï£¬Ö¸¶¨ÁË16Äê£¬¸ù¾İĞèÒª¿ÉÒÔ½øĞĞ¸ü¸Ä
-					int index=s.indexOf("16-");//´Ë´¦ĞèÒª¸ù¾İÈÕÖ¾±àĞ´ÊôĞÔ½øĞĞÅĞ¶Ï
-					String dateS=s.substring(index, index+17);//17Ò²ÊÇ¸ù¾İÈÕÖ¾±àĞ´ÊôĞÔĞ´µÄÓ²Öµ£¬¼´ÈÕÆÚµÄ×Ö·û´®×Ü³¤¶È
-					SimpleDateFormat sdf=new SimpleDateFormat("yy-MM-dd hh:mm:ss");//¸ù¾İ²»Í¬ÈÕÖ¾µÄÊ±¼ä¸ñÊ½£¬¸Ã¸ñÊ½¿ÉÄÜĞèÒª¸Ä±ä
+				if(s.matches("^.*16-.*$")&&s.length()>17){//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó²ï¿½ï¿½ï¿½Ğ¶Ï£ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½16ï¿½ê£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Ô½ï¿½ï¿½Ğ¸ï¿½ï¿½ï¿½
+					int index=s.indexOf("16-");//ï¿½Ë´ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½Ğ´ï¿½ï¿½ï¿½Ô½ï¿½ï¿½ï¿½ï¿½Ğ¶ï¿½
+					String dateS=s.substring(index, index+17);//17Ò²ï¿½Ç¸ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½Ğ´ï¿½ï¿½ï¿½ï¿½Ğ´ï¿½ï¿½Ó²Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Ü³ï¿½ï¿½ï¿½
+					SimpleDateFormat sdf=new SimpleDateFormat("yy-MM-dd hh:mm:ss");//ï¿½ï¿½ï¿½İ²ï¿½Í¬ï¿½ï¿½Ö¾ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½Ã¸ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½Ä±ï¿½
 					if(sdf.parse(dateS).compareTo(sdf.parse(startDate))>=0
 							&&sdf.parse(dateS).compareTo(sdf.parse(endDate))<=0){
 						ls.add(s);
