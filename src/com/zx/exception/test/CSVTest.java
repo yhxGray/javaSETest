@@ -6,8 +6,6 @@ import java.io.OutputStreamWriter;
 
 import org.testng.annotations.Test;
 
-
-
 public class CSVTest {
 	
 	@Test
